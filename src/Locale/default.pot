@@ -1,0 +1,871 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-10-15 23:37+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/FilesController.php:54
+#: Controller/FilesController.php:79
+msgid "The file has been saved."
+msgstr ""
+
+#: Controller/FilesController.php:58
+#: Controller/FilesController.php:83
+msgid "The file could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/FilesController.php:101
+msgid "The file has been deleted."
+msgstr ""
+
+#: Controller/FilesController.php:103
+msgid "The file could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/FilesProductsController.php:57
+#: Controller/FilesProductsController.php:83
+msgid "The files product has been saved."
+msgstr ""
+
+#: Controller/FilesProductsController.php:61
+#: Controller/FilesProductsController.php:87
+msgid "The files product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/FilesProductsController.php:106
+msgid "The files product has been deleted."
+msgstr ""
+
+#: Controller/FilesProductsController.php:108
+msgid "The files product could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/OrdersController.php:57
+#: Controller/OrdersController.php:83
+msgid "The order has been saved."
+msgstr ""
+
+#: Controller/OrdersController.php:61
+#: Controller/OrdersController.php:87
+msgid "The order could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OrdersController.php:106
+msgid "The order has been deleted."
+msgstr ""
+
+#: Controller/OrdersController.php:108
+msgid "The order could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/OrdersProductsController.php:57
+#: Controller/OrdersProductsController.php:83
+msgid "The orders product has been saved."
+msgstr ""
+
+#: Controller/OrdersProductsController.php:61
+#: Controller/OrdersProductsController.php:87
+msgid "The orders product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/OrdersProductsController.php:106
+msgid "The orders product has been deleted."
+msgstr ""
+
+#: Controller/OrdersProductsController.php:108
+msgid "The orders product could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:57
+#: Controller/ProductsController.php:84
+msgid "The product has been saved."
+msgstr ""
+
+#: Controller/ProductsController.php:61
+#: Controller/ProductsController.php:88
+msgid "The product could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProductsController.php:108
+msgid "The product has been deleted."
+msgstr ""
+
+#: Controller/ProductsController.php:110
+msgid "The product could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/RolesController.php:54
+#: Controller/RolesController.php:78
+msgid "The role has been saved."
+msgstr ""
+
+#: Controller/RolesController.php:58
+#: Controller/RolesController.php:82
+msgid "The role could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/RolesController.php:99
+msgid "The role has been deleted."
+msgstr ""
+
+#: Controller/RolesController.php:101
+msgid "The role could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:54
+#: Controller/TypesController.php:78
+msgid "The type has been saved."
+msgstr ""
+
+#: Controller/TypesController.php:58
+#: Controller/TypesController.php:82
+msgid "The type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:99
+msgid "The type has been deleted."
+msgstr ""
+
+#: Controller/TypesController.php:101
+msgid "The type could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:65
+#: Controller/UsersController.php:94
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:74
+#: Controller/UsersController.php:98
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:115
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:117
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Files/add.ctp:9
+#: Template/Files/edit.ctp:9
+#: Template/Files/index.ctp:9
+#: Template/Files/index.ctp:27
+#: Template/Files/view.ctp:9
+#: Template/Files/view.ctp:58
+#: Template/FilesProducts/add.ctp:9
+#: Template/FilesProducts/edit.ctp:9
+#: Template/FilesProducts/index.ctp:9
+#: Template/FilesProducts/index.ctp:24
+#: Template/FilesProducts/view.ctp:9
+#: Template/Orders/add.ctp:9
+#: Template/Orders/edit.ctp:9
+#: Template/Orders/index.ctp:9
+#: Template/Orders/index.ctp:27
+#: Template/Orders/view.ctp:9
+#: Template/Orders/view.ctp:56
+#: Template/OrdersProducts/add.ctp:9
+#: Template/OrdersProducts/edit.ctp:9
+#: Template/OrdersProducts/index.ctp:9
+#: Template/OrdersProducts/index.ctp:24
+#: Template/OrdersProducts/view.ctp:9
+#: Template/Products/add.ctp:9
+#: Template/Products/edit.ctp:9
+#: Template/Products/index.ctp:9
+#: Template/Products/index.ctp:31
+#: Template/Products/view.ctp:9
+#: Template/Products/view.ctp:65
+#: Template/Products/view.ctp:95
+#: Template/Roles/add.ctp:9
+#: Template/Roles/edit.ctp:9
+#: Template/Roles/index.ctp:9
+#: Template/Roles/index.ctp:20
+#: Template/Roles/view.ctp:9
+#: Template/Types/add.ctp:9
+#: Template/Types/edit.ctp:9
+#: Template/Types/index.ctp:9
+#: Template/Types/index.ctp:24
+#: Template/Types/view.ctp:9
+#: Template/Types/view.ctp:50
+#: Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:9
+#: Template/Users/index.ctp:9
+#: Template/Users/index.ctp:28
+#: Template/Users/view.ctp:9
+#: Template/Users/view.ctp:64
+msgid "Actions"
+msgstr ""
+
+#: Template/Files/add.ctp:10
+#: Template/Files/edit.ctp:16
+#: Template/Files/view.ctp:12
+#: Template/FilesProducts/add.ctp:13
+#: Template/FilesProducts/edit.ctp:19
+#: Template/FilesProducts/index.ctp:13
+#: Template/FilesProducts/view.ctp:16
+#: Template/Products/add.ctp:13
+#: Template/Products/edit.ctp:19
+#: Template/Products/index.ctp:13
+#: Template/Products/view.ctp:16
+msgid "List Files"
+msgstr ""
+
+#: Template/Files/add.ctp:11
+#: Template/Files/edit.ctp:17
+#: Template/Files/index.ctp:11
+#: Template/Files/view.ctp:14
+#: Template/FilesProducts/add.ctp:11
+#: Template/FilesProducts/edit.ctp:17
+#: Template/FilesProducts/index.ctp:11
+#: Template/FilesProducts/view.ctp:14
+#: Template/Orders/add.ctp:13
+#: Template/Orders/edit.ctp:19
+#: Template/Orders/index.ctp:13
+#: Template/Orders/view.ctp:16
+#: Template/OrdersProducts/add.ctp:13
+#: Template/OrdersProducts/edit.ctp:19
+#: Template/OrdersProducts/index.ctp:13
+#: Template/OrdersProducts/view.ctp:16
+#: Template/Products/add.ctp:10
+#: Template/Products/edit.ctp:16
+#: Template/Products/view.ctp:12
+#: Template/Types/add.ctp:11
+#: Template/Types/edit.ctp:17
+#: Template/Types/index.ctp:11
+#: Template/Types/view.ctp:14
+msgid "List Products"
+msgstr ""
+
+#: Template/Files/add.ctp:12
+#: Template/Files/edit.ctp:18
+#: Template/Files/index.ctp:12
+#: Template/Files/view.ctp:15
+#: Template/FilesProducts/add.ctp:12
+#: Template/FilesProducts/edit.ctp:18
+#: Template/FilesProducts/index.ctp:12
+#: Template/FilesProducts/view.ctp:15
+#: Template/Orders/add.ctp:14
+#: Template/Orders/edit.ctp:20
+#: Template/Orders/index.ctp:14
+#: Template/Orders/view.ctp:17
+#: Template/OrdersProducts/add.ctp:14
+#: Template/OrdersProducts/edit.ctp:20
+#: Template/OrdersProducts/index.ctp:14
+#: Template/OrdersProducts/view.ctp:17
+#: Template/Products/index.ctp:10
+#: Template/Products/view.ctp:13
+#: Template/Types/add.ctp:12
+#: Template/Types/edit.ctp:18
+#: Template/Types/index.ctp:12
+#: Template/Types/view.ctp:15
+msgid "New Product"
+msgstr ""
+
+#: Template/Files/add.ctp:18
+msgid "Add File"
+msgstr ""
+
+#: Template/Files/add.ctp:27
+#: Template/Files/edit.ctp:33
+#: Template/FilesProducts/add.ctp:24
+#: Template/FilesProducts/edit.ctp:30
+#: Template/Orders/add.ctp:27
+#: Template/Orders/edit.ctp:33
+#: Template/OrdersProducts/add.ctp:24
+#: Template/OrdersProducts/edit.ctp:30
+#: Template/Products/add.ctp:32
+#: Template/Products/edit.ctp:38
+#: Template/Roles/add.ctp:21
+#: Template/Roles/edit.ctp:27
+#: Template/Types/add.ctp:23
+#: Template/Types/edit.ctp:29
+#: Template/Users/add.ctp:27
+#: Template/Users/edit.ctp:33
+msgid "Submit"
+msgstr ""
+
+#: Template/Files/edit.ctp:11
+#: Template/Files/index.ctp:52
+#: Template/Files/view.ctp:72
+#: Template/FilesProducts/edit.ctp:11
+#: Template/FilesProducts/index.ctp:35
+#: Template/Orders/edit.ctp:11
+#: Template/Orders/index.ctp:41
+#: Template/Orders/view.ctp:70
+#: Template/OrdersProducts/edit.ctp:11
+#: Template/OrdersProducts/index.ctp:35
+#: Template/Products/edit.ctp:11
+#: Template/Products/index.ctp:47
+#: Template/Products/view.ctp:78
+#: Template/Products/view.ctp:107
+#: Template/Roles/edit.ctp:11
+#: Template/Roles/index.ctp:31
+#: Template/Types/edit.ctp:11
+#: Template/Types/index.ctp:37
+#: Template/Types/view.ctp:64
+#: Template/Users/edit.ctp:11
+#: Template/Users/index.ctp:45
+#: Template/Users/view.ctp:76
+msgid "Delete"
+msgstr ""
+
+#: Template/Files/edit.ctp:13
+#: Template/Files/index.ctp:52
+#: Template/Files/view.ctp:11
+#: Template/Files/view.ctp:72
+#: Template/FilesProducts/edit.ctp:13
+#: Template/FilesProducts/index.ctp:35
+#: Template/FilesProducts/view.ctp:11
+#: Template/Orders/edit.ctp:13
+#: Template/Orders/index.ctp:41
+#: Template/Orders/view.ctp:11
+#: Template/Orders/view.ctp:70
+#: Template/OrdersProducts/edit.ctp:13
+#: Template/OrdersProducts/index.ctp:35
+#: Template/OrdersProducts/view.ctp:11
+#: Template/Products/edit.ctp:13
+#: Template/Products/index.ctp:47
+#: Template/Products/view.ctp:11
+#: Template/Products/view.ctp:78
+#: Template/Products/view.ctp:107
+#: Template/Roles/edit.ctp:13
+#: Template/Roles/index.ctp:31
+#: Template/Roles/view.ctp:11
+#: Template/Types/edit.ctp:13
+#: Template/Types/index.ctp:37
+#: Template/Types/view.ctp:11
+#: Template/Types/view.ctp:64
+#: Template/Users/edit.ctp:13
+#: Template/Users/index.ctp:45
+#: Template/Users/view.ctp:11
+#: Template/Users/view.ctp:76
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Files/edit.ctp:24
+#: Template/Files/view.ctp:10
+msgid "Edit File"
+msgstr ""
+
+#: Template/Files/index.ctp:10
+#: Template/Files/view.ctp:13
+#: Template/FilesProducts/add.ctp:14
+#: Template/FilesProducts/edit.ctp:20
+#: Template/FilesProducts/index.ctp:14
+#: Template/FilesProducts/view.ctp:17
+#: Template/Products/add.ctp:14
+#: Template/Products/edit.ctp:20
+#: Template/Products/index.ctp:14
+#: Template/Products/view.ctp:17
+msgid "New File"
+msgstr ""
+
+#: Template/Files/index.ctp:16
+msgid "Files"
+msgstr ""
+
+#: Template/Files/index.ctp:21
+msgid "Preview"
+msgstr ""
+
+#: Template/Files/index.ctp:50
+#: Template/Files/view.ctp:70
+#: Template/FilesProducts/index.ctp:33
+#: Template/Orders/index.ctp:39
+#: Template/Orders/view.ctp:68
+#: Template/OrdersProducts/index.ctp:33
+#: Template/Products/index.ctp:45
+#: Template/Products/view.ctp:76
+#: Template/Products/view.ctp:105
+#: Template/Roles/index.ctp:29
+#: Template/Types/index.ctp:35
+#: Template/Types/view.ctp:62
+#: Template/Users/index.ctp:43
+#: Template/Users/view.ctp:74
+msgid "View"
+msgstr ""
+
+#: Template/Files/index.ctp:51
+#: Template/Files/view.ctp:71
+#: Template/FilesProducts/index.ctp:34
+#: Template/Orders/index.ctp:40
+#: Template/Orders/view.ctp:69
+#: Template/OrdersProducts/index.ctp:34
+#: Template/Products/index.ctp:46
+#: Template/Products/view.ctp:77
+#: Template/Products/view.ctp:106
+#: Template/Roles/index.ctp:30
+#: Template/Types/index.ctp:36
+#: Template/Types/view.ctp:63
+#: Template/Users/index.ctp:44
+#: Template/Users/view.ctp:75
+msgid "Edit"
+msgstr ""
+
+#: Template/Files/index.ctp:60
+#: Template/FilesProducts/index.ctp:43
+#: Template/Orders/index.ctp:49
+#: Template/OrdersProducts/index.ctp:43
+#: Template/Products/index.ctp:55
+#: Template/Roles/index.ctp:39
+#: Template/Types/index.ctp:45
+#: Template/Users/index.ctp:53
+msgid "first"
+msgstr ""
+
+#: Template/Files/index.ctp:61
+#: Template/FilesProducts/index.ctp:44
+#: Template/Orders/index.ctp:50
+#: Template/OrdersProducts/index.ctp:44
+#: Template/Products/index.ctp:56
+#: Template/Roles/index.ctp:40
+#: Template/Types/index.ctp:46
+#: Template/Users/index.ctp:54
+msgid "previous"
+msgstr ""
+
+#: Template/Files/index.ctp:63
+#: Template/FilesProducts/index.ctp:46
+#: Template/Orders/index.ctp:52
+#: Template/OrdersProducts/index.ctp:46
+#: Template/Products/index.ctp:58
+#: Template/Roles/index.ctp:42
+#: Template/Types/index.ctp:48
+#: Template/Users/index.ctp:56
+msgid "next"
+msgstr ""
+
+#: Template/Files/index.ctp:64
+#: Template/FilesProducts/index.ctp:47
+#: Template/Orders/index.ctp:53
+#: Template/OrdersProducts/index.ctp:47
+#: Template/Products/index.ctp:59
+#: Template/Roles/index.ctp:43
+#: Template/Types/index.ctp:49
+#: Template/Users/index.ctp:57
+msgid "last"
+msgstr ""
+
+#: Template/Files/index.ctp:66
+#: Template/FilesProducts/index.ctp:49
+#: Template/Orders/index.ctp:55
+#: Template/OrdersProducts/index.ctp:49
+#: Template/Products/index.ctp:61
+#: Template/Roles/index.ctp:45
+#: Template/Types/index.ctp:51
+#: Template/Users/index.ctp:59
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: Template/Files/view.ctp:11
+msgid "Delete File"
+msgstr ""
+
+#: Template/Files/view.ctp:22
+#: Template/Files/view.ctp:53
+#: Template/Orders/view.ctp:51
+#: Template/Products/view.ctp:30
+#: Template/Products/view.ctp:60
+#: Template/Types/view.ctp:45
+msgid "Name"
+msgstr ""
+
+#: Template/Files/view.ctp:26
+#: Template/Products/view.ctp:61
+msgid "Path"
+msgstr ""
+
+#: Template/Files/view.ctp:30
+#: Template/Files/view.ctp:51
+#: Template/Orders/view.ctp:28
+#: Template/Orders/view.ctp:49
+#: Template/Products/view.ctp:38
+#: Template/Products/view.ctp:59
+#: Template/Products/view.ctp:90
+#: Template/Roles/view.ctp:24
+#: Template/Types/view.ctp:26
+#: Template/Types/view.ctp:43
+#: Template/Users/view.ctp:34
+#: Template/Users/view.ctp:59
+msgid "Id"
+msgstr ""
+
+#: Template/Files/view.ctp:34
+#: Template/Files/view.ctp:56
+#: Template/Orders/view.ctp:36
+#: Template/Orders/view.ctp:54
+#: Template/Products/view.ctp:46
+#: Template/Products/view.ctp:62
+#: Template/Products/view.ctp:93
+#: Template/Types/view.ctp:30
+#: Template/Types/view.ctp:48
+#: Template/Users/view.ctp:42
+#: Template/Users/view.ctp:62
+msgid "Created"
+msgstr ""
+
+#: Template/Files/view.ctp:38
+#: Template/Files/view.ctp:57
+#: Template/Orders/view.ctp:40
+#: Template/Orders/view.ctp:55
+#: Template/Products/view.ctp:50
+#: Template/Products/view.ctp:63
+#: Template/Products/view.ctp:94
+#: Template/Types/view.ctp:34
+#: Template/Types/view.ctp:49
+#: Template/Users/view.ctp:46
+#: Template/Users/view.ctp:63
+msgid "Modified"
+msgstr ""
+
+#: Template/Files/view.ctp:42
+#: Template/Products/view.ctp:64
+msgid "Status"
+msgstr ""
+
+#: Template/Files/view.ctp:43
+#: Template/Users/view.ctp:51
+msgid "Yes"
+msgstr ""
+
+#: Template/Files/view.ctp:43
+#: Template/Users/view.ctp:51
+msgid "No"
+msgstr ""
+
+#: Template/Files/view.ctp:47
+#: Template/Orders/view.ctp:45
+#: Template/Types/view.ctp:39
+msgid "Related Products"
+msgstr ""
+
+#: Template/Files/view.ctp:52
+#: Template/Orders/view.ctp:50
+#: Template/Types/view.ctp:44
+msgid "Type Id"
+msgstr ""
+
+#: Template/Files/view.ctp:54
+#: Template/Orders/view.ctp:52
+#: Template/Products/view.ctp:42
+#: Template/Types/view.ctp:46
+msgid "Price"
+msgstr ""
+
+#: Template/Files/view.ctp:55
+#: Template/Orders/view.ctp:53
+#: Template/Products/view.ctp:34
+#: Template/Types/view.ctp:47
+msgid "Description"
+msgstr ""
+
+#: Template/FilesProducts/add.ctp:10
+#: Template/FilesProducts/edit.ctp:16
+#: Template/FilesProducts/view.ctp:12
+msgid "List Files Products"
+msgstr ""
+
+#: Template/FilesProducts/add.ctp:20
+msgid "Add Files Product"
+msgstr ""
+
+#: Template/FilesProducts/edit.ctp:26
+#: Template/FilesProducts/view.ctp:10
+msgid "Edit Files Product"
+msgstr ""
+
+#: Template/FilesProducts/index.ctp:10
+#: Template/FilesProducts/view.ctp:13
+msgid "New Files Product"
+msgstr ""
+
+#: Template/FilesProducts/index.ctp:18
+msgid "Files Products"
+msgstr ""
+
+#: Template/FilesProducts/view.ctp:11
+msgid "Delete Files Product"
+msgstr ""
+
+#: Template/FilesProducts/view.ctp:24
+#: Template/OrdersProducts/view.ctp:28
+msgid "Product"
+msgstr ""
+
+#: Template/FilesProducts/view.ctp:28
+msgid "File"
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/Orders/add.ctp:10
+#: Template/Orders/edit.ctp:16
+#: Template/Orders/view.ctp:12
+#: Template/OrdersProducts/add.ctp:11
+#: Template/OrdersProducts/edit.ctp:17
+#: Template/OrdersProducts/index.ctp:11
+#: Template/OrdersProducts/view.ctp:14
+#: Template/Products/add.ctp:15
+#: Template/Products/edit.ctp:21
+#: Template/Products/index.ctp:15
+#: Template/Products/view.ctp:18
+#: Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17
+#: Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Orders"
+msgstr ""
+
+#: Template/Orders/add.ctp:11
+#: Template/Orders/edit.ctp:17
+#: Template/Orders/index.ctp:11
+#: Template/Orders/view.ctp:14
+#: Template/Users/add.ctp:10
+#: Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Orders/add.ctp:12
+#: Template/Orders/edit.ctp:18
+#: Template/Orders/index.ctp:12
+#: Template/Orders/view.ctp:15
+#: Template/Users/index.ctp:10
+#: Template/Users/view.ctp:13
+msgid "New User"
+msgstr ""
+
+#: Template/Orders/add.ctp:20
+msgid "Add Order"
+msgstr ""
+
+#: Template/Orders/edit.ctp:26
+#: Template/Orders/view.ctp:10
+msgid "Edit Order"
+msgstr ""
+
+#: Template/Orders/index.ctp:10
+#: Template/Orders/view.ctp:13
+#: Template/OrdersProducts/add.ctp:12
+#: Template/OrdersProducts/edit.ctp:18
+#: Template/OrdersProducts/index.ctp:12
+#: Template/OrdersProducts/view.ctp:15
+#: Template/Products/add.ctp:16
+#: Template/Products/edit.ctp:22
+#: Template/Products/index.ctp:16
+#: Template/Products/view.ctp:19
+#: Template/Users/add.ctp:12
+#: Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12
+#: Template/Users/view.ctp:15
+msgid "New Order"
+msgstr ""
+
+#: Template/Orders/index.ctp:18
+msgid "Orders"
+msgstr ""
+
+#: Template/Orders/view.ctp:11
+msgid "Delete Order"
+msgstr ""
+
+#: Template/Orders/view.ctp:24
+msgid "User"
+msgstr ""
+
+#: Template/Orders/view.ctp:32
+#: Template/Products/view.ctp:92
+#: Template/Users/view.ctp:61
+msgid "Order Date"
+msgstr ""
+
+#: Template/OrdersProducts/add.ctp:10
+#: Template/OrdersProducts/edit.ctp:16
+#: Template/OrdersProducts/view.ctp:12
+msgid "List Orders Products"
+msgstr ""
+
+#: Template/OrdersProducts/add.ctp:20
+msgid "Add Orders Product"
+msgstr ""
+
+#: Template/OrdersProducts/edit.ctp:26
+#: Template/OrdersProducts/view.ctp:10
+msgid "Edit Orders Product"
+msgstr ""
+
+#: Template/OrdersProducts/index.ctp:10
+#: Template/OrdersProducts/view.ctp:13
+msgid "New Orders Product"
+msgstr ""
+
+#: Template/OrdersProducts/index.ctp:18
+msgid "Orders Products"
+msgstr ""
+
+#: Template/OrdersProducts/view.ctp:11
+msgid "Delete Orders Product"
+msgstr ""
+
+#: Template/OrdersProducts/view.ctp:24
+msgid "Order"
+msgstr ""
+
+#: Template/Products/add.ctp:11
+#: Template/Products/edit.ctp:17
+#: Template/Products/index.ctp:11
+#: Template/Products/view.ctp:14
+#: Template/Types/add.ctp:10
+#: Template/Types/edit.ctp:16
+#: Template/Types/view.ctp:12
+msgid "List Types"
+msgstr ""
+
+#: Template/Products/add.ctp:12
+#: Template/Products/edit.ctp:18
+#: Template/Products/index.ctp:12
+#: Template/Products/view.ctp:15
+#: Template/Types/index.ctp:10
+#: Template/Types/view.ctp:13
+msgid "New Type"
+msgstr ""
+
+#: Template/Products/add.ctp:22
+msgid "Add Product"
+msgstr ""
+
+#: Template/Products/edit.ctp:28
+#: Template/Products/view.ctp:10
+msgid "Edit Product"
+msgstr ""
+
+#: Template/Products/index.ctp:20
+msgid "Products"
+msgstr ""
+
+#: Template/Products/view.ctp:11
+msgid "Delete Product"
+msgstr ""
+
+#: Template/Products/view.ctp:26
+#: Template/Types/view.ctp:22
+msgid "Type"
+msgstr ""
+
+#: Template/Products/view.ctp:55
+msgid "Related Files"
+msgstr ""
+
+#: Template/Products/view.ctp:86
+#: Template/Users/view.ctp:55
+msgid "Related Orders"
+msgstr ""
+
+#: Template/Products/view.ctp:91
+#: Template/Users/view.ctp:60
+msgid "User Id"
+msgstr ""
+
+#: Template/Roles/add.ctp:10
+#: Template/Roles/edit.ctp:16
+#: Template/Roles/view.ctp:12
+msgid "List Roles"
+msgstr ""
+
+#: Template/Roles/add.ctp:16
+msgid "Add Role"
+msgstr ""
+
+#: Template/Roles/edit.ctp:22
+#: Template/Roles/view.ctp:10
+msgid "Edit Role"
+msgstr ""
+
+#: Template/Roles/index.ctp:10
+#: Template/Roles/view.ctp:13
+msgid "New Role"
+msgstr ""
+
+#: Template/Roles/index.ctp:14
+msgid "Roles"
+msgstr ""
+
+#: Template/Roles/view.ctp:11
+msgid "Delete Role"
+msgstr ""
+
+#: Template/Roles/view.ctp:20
+msgid "Title"
+msgstr ""
+
+#: Template/Types/add.ctp:18
+msgid "Add Type"
+msgstr ""
+
+#: Template/Types/edit.ctp:24
+#: Template/Types/view.ctp:10
+msgid "Edit Type"
+msgstr ""
+
+#: Template/Types/index.ctp:16
+msgid "Types"
+msgstr ""
+
+#: Template/Types/view.ctp:11
+msgid "Delete Type"
+msgstr ""
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:24
+#: Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr ""
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:22
+msgid "Email"
+msgstr ""
+
+#: Template/Users/view.ctp:26
+msgid "Password"
+msgstr ""
+
+#: Template/Users/view.ctp:30
+msgid "Uuid"
+msgstr ""
+
+#: Template/Users/view.ctp:38
+msgid "Id Role"
+msgstr ""
+
+#: Template/Users/view.ctp:50
+msgid "Active"
+msgstr ""
+
