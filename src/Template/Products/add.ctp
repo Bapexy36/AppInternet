@@ -4,6 +4,18 @@
  * @var \App\Model\Entity\Product $product
  */
 ?>
+
+<?php
+$urlToProductsAutocompletedemoJson = $this->Url->build([
+    "controller" => "Products",
+    "action" => "findProducts",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToAutocompleteAction = "' . $urlToProductsAutocompletedemoJson . '";', ['block' => true]);
+echo $this->Html->script('Products/autocompletedemo', ['block' => 'scriptBottom']);
+?>
+
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -22,7 +34,7 @@
         <legend><?= __('Add Product') ?></legend>
         <?php
             echo $this->Form->control('type_id', ['options' => $types]);
-            echo $this->Form->control('name');
+            echo $this->Form->input('name', ['id' => 'autocomplete']);
             echo $this->Form->control('price');
             echo $this->Form->control('description');
             echo $this->Form->control('files._ids', ['options' => $files]);

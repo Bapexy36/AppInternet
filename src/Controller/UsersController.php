@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+use Cake\Utility\Text;
 
 /**
  * Users Controller
@@ -119,6 +121,7 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
 
     public function login() {
         if ($this->request->is('post')) {

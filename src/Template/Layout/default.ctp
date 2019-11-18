@@ -29,9 +29,28 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
 
+    <?php
+        echo $this->Html->css([
+            'base.css',
+            'style.css',
+            'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css',
+            'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css'
+        ]);
+        ?>
+
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+
+    <?php
+        echo $this->Html->script([
+            'https://code.jquery.com/jquery-1.12.4.js',
+            'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
+            'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+                ], ['block' => 'scriptLibraries']
+        );
+        ?>
+
 </head>
 <body>
     <nav class="top-bar expanded" data-topbar role="navigation">
@@ -83,5 +102,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </div>
     <footer>
     </footer>
+
+    <?= $this->fetch('scriptLibraries') ?>
+        <?= $this->fetch('script'); ?>
+        <?= $this->fetch('scriptBottom') ?> 
 </body>
 </html>

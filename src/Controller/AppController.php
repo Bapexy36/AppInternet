@@ -72,8 +72,20 @@ class AppController extends Controller
 
         // Allow the display action so our pages controller
         // continues to work. Also enable the read only actions.
-        $this->Auth->allow(['display', 'view', 'index', 'changelang']);
+        $this->Auth->allow(['display', 'view', 'index', 'changelang', 'add']);
 
+    }
+
+    public function beforeRender(Event $event)
+    {
+        // Note: These defaults are just to get started quickly with development
+        // and should not be used in production. You should instead set "_serialize"
+        // in each action as required.
+        if (!array_key_exists('_serialize', $this->viewVars) &&
+            in_array($this->response->type(), ['application/json', 'application/xml'])
+        ) {
+            $this->set('_serialize', true);
+        }
     }
 
     public function isAuthorized($user) {

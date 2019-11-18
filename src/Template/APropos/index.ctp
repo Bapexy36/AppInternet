@@ -17,6 +17,8 @@
         <li><hr/></li>
         <li><?= $this->Html->link(__('List Products'), ['controller' => 'Products', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('Manage Clothes'), ['controller' => 'Clothes', 'action' => 'index']) ?></li>
     </ul>
 </nav>
     <div class="customers index large-9 medium-8 columns content">
@@ -43,10 +45,22 @@
                 <?= __('Create new product types, new products to be able to create "Orders"') ?>
             </li>
             <li>
-                <?= __('You can add 1 item in an order.') ?>
+                <?= __('You can add items in an order.') ?>
             </li>
             <li>
                 <?= __('You can add an image in the file section.') ?>
+            </li>
+            <li>
+                <?= __('You can Manage the clothes in the clothes section by accessing it with the navigation toolbar.') ?>
+            </li>
+            <li>
+                <?= __('The add and modification fonctionality in AJAX is not working, but the code is done.') ?>
+            </li>
+            <li>
+                <?= __('Tou can view a pdf when you click on the small link beside the product in the product list.') ?>
+            </li>
+            <li>
+                <?= __('The only thing that is not done is the Bootstrap interface.') ?>
             </li>
         </ul>
         <h4><?= __('Users') ?></h4>
@@ -77,11 +91,11 @@
                 </li>
             </ul>
 
-        <h4><?= __('Diagrams') ?></h4>
+        <h4><?= __('Here is the BD diagram') ?></h4>
         <hr />
         <img src="webroot/img/bd.jpg" width="600" height="600">
         <br />
-        <?= __('Link to the original diagram: ') ?>
+        <?= __('With this link you can see the original diagram: ') ?>
         <br />
         <?= $this->Html->link('http://www.databaseanswers.org/data_models/customers_and_products/index.htm') ?>
         <hr />

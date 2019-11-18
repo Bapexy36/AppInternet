@@ -22,6 +22,13 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+Router::prefix('Admin', function ($routes) { $routes->fallbacks('InflectedRoute'); });
+Router::extensions(['pdf']);
+Router::extensions(['json', 'xml']);
+
+
+
+
 /**
  * The default class to use for all routes
  *
@@ -44,6 +51,14 @@ use Cake\Routing\Route\DashedRoute;
  *
  */
 Router::defaultRouteClass(DashedRoute::class);
+
+Router::prefix('api', function ($routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Clothes');
+    $routes->resources('Users');
+    Router::connect('/api/users/register', ['controller' => 'Users', 'action' => 'add', 'prefix' => 'api']);
+    $routes->fallbacks('InflectedRoute');
+});
 
 Router::scope('/', function (RouteBuilder $routes) {
     // Register scoped middleware for in scopes.

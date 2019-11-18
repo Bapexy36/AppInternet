@@ -12,6 +12,34 @@ use App\Controller\AppController;
  */
 class ProductsController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->loadComponent('RequestHandler');
+        $this->Auth->allow(['findProducts', 'findReviews', 'add', 'edit', 'delete']);
+    }
+
+    public function findProducts() {
+
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Products->find('all', array(
+                'conditions' => array('Products.name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['name'], 'value' => $result['name']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
+
+    public function autocompletedemo() {
+        
+    }
+
     /**
      * Index method
      *
