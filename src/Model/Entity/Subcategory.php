@@ -26,6 +26,7 @@ class Subcategory extends Entity
     protected $_accessible = [
         'category_id' => true,
         'name' => true,
-        'category' => true
+        'category' => true,
+        'houses' => true
     ];
 }

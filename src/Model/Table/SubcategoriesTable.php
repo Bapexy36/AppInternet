@@ -37,8 +37,10 @@ class SubcategoriesTable extends Table
         $this->setPrimaryKey('id');
 
         $this->belongsTo('Categories', [
-            'foreignKey' => 'category_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'category_id'
+        ]);
+        $this->hasMany('Houses', [
+            'foreignKey' => 'subcategory_id'
         ]);
     }
 

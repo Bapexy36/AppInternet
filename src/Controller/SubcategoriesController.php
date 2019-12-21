@@ -12,20 +12,22 @@ use App\Controller\AppController;
  */
 class SubcategoriesController extends AppController
 {
-
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['getByCategory']);
-    }
-
     public function getByCategory() {
         $category_id = $this->request->query('category_id');
 
         $subcategories = $this->Subcategories->find('all', [
             'conditions' => ['Subcategories.category_id' => $category_id],
         ]);
-        $this->set('subcategories', $subcategories);
+        $this->set('subcategories',$subcategories);
         $this->set('_serialize', ['subcategories']);
+    }
+    
+        public function getSubcategoriesSortedByCategories() {
+        $categories = $this->Subcategories->Categories->find('all', [
+            'contain' => ['Subcategories'],
+        ]);
+        $this->set('categories',$categories);
+        $this->set('_serialize', ['categories']);
     }
     /**
      * Index method
@@ -40,6 +42,7 @@ class SubcategoriesController extends AppController
         $subcategories = $this->paginate($this->Subcategories);
 
         $this->set(compact('subcategories'));
+        $this->set('_serialize', ['subcategories']);
     }
 
     /**
@@ -56,6 +59,7 @@ class SubcategoriesController extends AppController
         ]);
 
         $this->set('subcategory', $subcategory);
+        $this->set('_serialize', ['subcategory']);
     }
 
     /**
@@ -77,6 +81,7 @@ class SubcategoriesController extends AppController
         }
         $categories = $this->Subcategories->Categories->find('list', ['limit' => 200]);
         $this->set(compact('subcategory', 'categories'));
+        $this->set('_serialize', ['subcategory']);
     }
 
     /**
@@ -102,6 +107,7 @@ class SubcategoriesController extends AppController
         }
         $categories = $this->Subcategories->Categories->find('list', ['limit' => 200]);
         $this->set(compact('subcategory', 'categories'));
+        $this->set('_serialize', ['subcategory']);
     }
 
     /**

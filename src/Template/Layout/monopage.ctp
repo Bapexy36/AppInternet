@@ -17,7 +17,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
     <head>
-    <head>
         <?= $this->Html->charset() ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
@@ -41,40 +40,42 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         echo $this->Html->script([
             'https://code.jquery.com/jquery-1.12.4.js',
             'https://code.jquery.com/ui/1.12.1/jquery-ui.js',
-            'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'
+            'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+            'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'
                 ], ['block' => 'scriptLibraries']
         );
         ?>
     </head>
-</head>
-<body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><?=
-                    $this->Html->link('Section Admin en PHP', [
-                        'prefix' => 'admin',
-                        'controller' => 'Clothes',
-                        'action' => 'index'
-                    ]);
-                    ?>
+    <body>
+        <nav class="top-bar expanded" data-topbar role="navigation">
+            <ul class="title-area large-3 medium-4 columns">
+                <li class="name">
+                    <h1><a href=""><?= $this->fetch('title') ?></a></h1>
                 </li>
             </ul>
+            <div class="top-bar-section">
+                <ul class="right">
+                    <li><?=
+                        $this->Html->link('Section Admin en PHP', [
+                            'prefix' => 'admin',
+                            'controller' => 'Clothes',
+                            'action' => 'index'
+                        ]);
+                        ?>
+                    </li>
+                    <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
+                    <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+                </ul>
+            </div>
+        </nav>
+        <?= $this->Flash->render() ?>
+        <div class="container clearfix">
+            <?= $this->fetch('content') ?>
         </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
-    <?= $this->fetch('scriptLibraries') ?>
-    <?= $this->fetch('script'); ?>
-    <?= $this->fetch('scriptBottom') ?> 
-</body>
+        <footer>
+        </footer>
+        <?= $this->fetch('scriptLibraries') ?>
+        <?= $this->fetch('script'); ?>
+        <?= $this->fetch('scriptBottom') ?> 
+    </body>
 </html>

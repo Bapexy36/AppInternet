@@ -26,10 +26,7 @@ class House extends Entity
      * @var array
      */
     protected $_accessible = [
-        'category_id' => true,
-        'subcategory_id' => true,
-        'city' => true,
-        'category' => true,
-        'subcategory' => true
+        '*' => true,
+        'id' => false
     ];
 }

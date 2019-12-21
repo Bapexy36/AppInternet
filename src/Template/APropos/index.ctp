@@ -19,6 +19,8 @@
         <li><?= $this->Html->link(__('Add Files'), ['controller' => 'Files', 'action' => 'add']) ?></li>
         <li><hr/></li>
         <li><?= $this->Html->link(__('Manage Clothes'), ['controller' => 'Clothes', 'action' => 'index']) ?></li>
+        <li><hr/></li>
+        <li><?= $this->Html->link(__('Houses'), ['controller' => 'Houses', 'action' => 'index']) ?></li>
     </ul>
 </nav>
     <div class="customers index large-9 medium-8 columns content">
@@ -51,7 +53,7 @@
                 <?= __('You can add an image in the file section.') ?>
             </li>
             <li>
-                <?= __('You can Manage the clothes in the clothes section by accessing it with the navigation toolbar.') ?>
+                <?= __('You can manage the clothes in the clothes section by accessing it with the navigation toolbar.') ?>
             </li>
             <li>
                 <?= __('The add and modification fonctionality in AJAX is not working, but the code is done.') ?>
@@ -61,6 +63,21 @@
             </li>
             <li>
                 <?= __('The only thing that is not done is the Bootstrap interface.') ?>
+            </li>
+            <li>
+                <?= __('Linked lists are in the House table, but they do not work. All the coding is done. You can access the Houses section in the menuon the left.') ?>
+            </li>
+            <li>
+                <?= __('The CRUD operation with AngularJS are coded in the Clothes section, but only the add operation is working.') ?>
+            </li>
+            <li>
+                <?= __('The Captcha appear in the login page.') ?>
+            </li>
+            <li>
+                <?= __('The slide and drop fonction is done in the Files section(It is coded), but it does not work.') ?>
+            </li>
+            <li>
+                <?= __('The only thing that is not done is the JWT token.') ?>
             </li>
         </ul>
         <h4><?= __('Users') ?></h4>

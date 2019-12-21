@@ -120,4 +120,33 @@ class ClothesController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        $param = $this->request->getParam('pass.0');
+
+        
+        if($user['id_role'] === 1){
+            if (in_array($action, ['display', 'view', 'index', 'changelang','add','edit','delete'])){
+                return true;
+            }
+        }
+
+        
+        elseif ($user['id_role'] === 2){
+            if (in_array($action, ['display', 'view', 'index', 'changelang','add'])){
+                return true;
+            }
+        }
+        
+        elseif ($user['id_role'] === 3){
+            if (in_array($action, ['display', 'view', 'index', 'changelang'])){
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
+    }
 }

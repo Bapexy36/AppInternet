@@ -25,6 +25,7 @@ class HousesController extends AppController
         $houses = $this->paginate($this->Houses);
 
         $this->set(compact('houses'));
+        $this->set('_serialize', ['houses']);
     }
 
     /**
@@ -41,6 +42,7 @@ class HousesController extends AppController
         ]);
 
         $this->set('house', $house);
+        $this->set('_serialize', ['house']);
     }
 
     /**
@@ -69,11 +71,13 @@ class HousesController extends AppController
        reset($categories);
        $category_id = key($categories);
 
-       // Bâtir la liste des sous-catégories reliées à cette catégorie
-       $subcategories = $this->Houses->Subcategories->find('list', [
-           'conditions' => ['Subcategories.category_id' => $category_id],
-       ]);
-        $this->set(compact('house', 'categories', 'subcategories'));
+        // Bâtir la liste des sous-catégories reliées à cette catégorie
+        $subcategories = $this->Houses->Subcategories->find('list', [
+            'conditions' => ['Subcategories.category_id' => $category_id],
+        ]);
+
+        $this->set(compact('house', 'subcategories', 'categories'));
+        $this->set('_serialize', ['house', 'subcategories', 'categories']);
     }
 
     /**
@@ -100,6 +104,7 @@ class HousesController extends AppController
         $categories = $this->Houses->Categories->find('list', ['limit' => 200]);
         $subcategories = $this->Houses->Subcategories->find('list', ['limit' => 200]);
         $this->set(compact('house', 'categories', 'subcategories'));
+        $this->set('_serialize', ['house']);
     }
 
     /**
@@ -120,5 +125,34 @@ class HousesController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        $param = $this->request->getParam('pass.0');
+
+        
+        if($user['id_role'] === 1){
+            if (in_array($action, ['display', 'view', 'index', 'changelang','add','edit','delete'])){
+                return true;
+            }
+        }
+
+        
+        elseif ($user['id_role'] === 2){
+            if (in_array($action, ['display', 'view', 'index', 'changelang','add'])){
+                return true;
+            }
+        }
+        
+        elseif ($user['id_role'] === 3){
+            if (in_array($action, ['display', 'view', 'index', 'changelang'])){
+                return true;
+            }
+        }
+        else {
+            return false;
+        }
     }
 }

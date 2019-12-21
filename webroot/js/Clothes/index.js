@@ -1,72 +1,132 @@
-function getClothes() {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi,
-        dataType: "json",
-        success:
-                function (clothes) {
-                    var clotheTable = $('#clotheData');
-                    clotheTable.empty();
-                    var count = 1;
-                    $.each(clothes.data, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="glyphicon glyphicon-edit" onclick="editClothe(' + value.id + ')"></a>' +
-                                '<a href="javascript:void(0);" class="glyphicon glyphicon-trash" onclick="return confirm(\'Are you sure to delete data?\') ? clotheAction(\'delete\', ' + value.id + ') : false;"></a>' +
-                                '</td></tr>';
-                        clotheTable.append('<tr><td>' + count + '</td><td>' + value.name + '</td><td>' + editDeleteButtons);
-                        count++;
-                    });
+var app = angular.module('app', []);
 
-                }
-    });
-}
+app.controller('ClotheCRUDCtrl', ['$scope', 'ClotheCRUDService', function ($scope, ClotheCRUDService) {
 
-/* Function takes a jquery form
- and converts it to a JSON dictionary */
-function convertFormToJSON(form) {
-    var array = $(form).serializeArray();
-    var json = {};
+        $scope.updateClothe = function () {
+            ClotheCRUDService.updateClothe($scope.clothe.id, $scope.clothe.name, $scope.clothe.price)
+                    .then(function success(response) {
+                        $scope.message = 'Clothe data updated!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error updating clothe!';
+                                $scope.message = '';
+                            });
+        }
 
-    $.each(array, function () {
-        json[this.name] = this.value || '';
-    });
+        $scope.getClothe = function () {
+            var id = $scope.clothe.id;
+            ClotheCRUDService.getClothe($scope.clothe.id)
+                    .then(function success(response) {
+                        $scope.clothe = response.data.data;
+                        $scope.clothe.id = id;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                if (response.status === 404) {
+                                    $scope.errorMessage = 'Clothe not found!';
+                                } else {
+                                    $scope.errorMessage = "Error getting clothe!";
+                                }
+                            });
+        }
 
-    return json;
-}
-
-
-function clotheAction(type, id) {
-    id = (typeof id == "undefined") ? '' : id;
-    var statusArr = {add: "added", edit: "updated", delete: "deleted"};
-    var requestType = '';
-    var clotheData = '';
-    var ajaxUrl = urlToRestApi;
-    if (type == 'add') {
-        requestType = 'POST';
-        clotheData = convertFormToJSON($("#addForm").find('.form'));
-    } else if (type == 'edit') {
-        requestType = 'PUT';
-        clotheData = convertFormToJSON($("#editForm").find('.form'));
-    } else {
-        requestType = 'DELETE';
-        ajaxUrl = ajaxUrl + "/" + id;
-    }
-    $.ajax({
-        type: requestType,
-        url: ajaxUrl,
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(clotheData),
-        success: function (msg) {
-            if (msg) {
-                alert('Clothe data has been ' + statusArr[type] + ' successfully.');
-                getClothes();
-                $('.form')[0].reset();
-                $('.formData').slideUp();
+        $scope.addClothe = function () {
+            if ($scope.clothe != null && $scope.clothe.name) {
+                ClotheCRUDService.addClothe($scope.clothe.name, $scope.clothe.price)
+                        .then(function success(response) {
+                            $scope.message = 'Clothe added!';
+                            $scope.errorMessage = '';
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Error adding clothe!';
+                                    $scope.message = '';
+                                });
             } else {
-                alert('Some problem occurred, please try again.');
+                $scope.errorMessage = 'Please enter a name!';
+                $scope.message = '';
             }
         }
-    });
-}
+
+        $scope.deleteClothe = function () {
+            ClotheCRUDService.deleteClothe($scope.clothe.id)
+                    .then(function success(response) {
+                        $scope.message = 'Clothe deleted!';
+                        $scope.clothe = null;
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error deleting clothe!';
+                                $scope.message = '';
+                            })
+        }
+
+        $scope.getAllClothes = function () {
+            ClotheCRUDService.getAllClothes()
+                    .then(function success(response) {
+                        $scope.clothes = response.data.data;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                $scope.errorMessage = 'Error getting clothes!';
+                            });
+        }
+
+    }]);
+
+app.service('ClotheCRUDService', ['$http', function ($http) {
+
+        this.getClothe = function getClothe(clotheId) {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi + '/' + clotheId,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+        this.addClothe = function addClothe(name, price) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApi,
+                data: {name: name, price: price},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+        this.deleteClothe = function deleteClothe(id) {
+            return $http({
+                method: 'DELETE',
+                url: urlToRestApi + '/' + id,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.updateClothe = function updateClothe(id, name, price) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApi + '/' + id,
+                data: {name: name, price: price},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.getAllClothes = function getAllClothes() {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+    }]);
+
+

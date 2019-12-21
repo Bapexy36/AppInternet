@@ -42,8 +42,7 @@ class HousesTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Subcategories', [
-            'foreignKey' => 'subcategory_id',
-            'joinType' => 'INNER'
+            'foreignKey' => 'subcategory_id'
         ]);
     }
 
